@@ -1,0 +1,12 @@
+---
+
+apiVersion: v2
+name: release-dash
+description: A Helm chart for release-dash
+type: application
+home: https://github.com/lobsterdore/release-dash
+sources:
+  - https://github.com/lobsterdore/release-dash
+version: 0.0.4
+appVersion: 0.25.0
+
