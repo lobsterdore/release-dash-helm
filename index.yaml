@@ -3,6 +3,19 @@ entries:
   release-dash:
   - apiVersion: v2
     appVersion: 0.25.0
+    created: "2020-12-19T10:50:44.394347438Z"
+    description: A Helm chart for release-dash
+    digest: 37e710de69bba18db15031419a71ca4d0df9654e2719c294494cb4e6cb9d3555
+    home: https://github.com/lobsterdore/release-dash
+    name: release-dash
+    sources:
+    - https://github.com/lobsterdore/release-dash
+    type: application
+    urls:
+    - https://github.com/lobsterdore/release-dash-helm/releases/download/release-dash-1.7.0/release-dash-1.7.0.tgz
+    version: 1.7.0
+  - apiVersion: v2
+    appVersion: 0.25.0
     created: "2020-12-19T07:58:09.607820322Z"
     description: A Helm chart for release-dash
     digest: 11d0fd78ba6b46af5ceaa9cbd23b8125f4e3d39ff4d1b100c2ab4ea5d1beae73
