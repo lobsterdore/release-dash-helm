@@ -18,14 +18,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.17.2
-        id: tag_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_BRANCHES: main
-          WITH_V: true
-
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
@@ -35,3 +27,11 @@ jobs:
         uses: helm/chart-releaser-action@v1.1.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.17.2
+        id: tag_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_BRANCHES: main
+          WITH_V: true
