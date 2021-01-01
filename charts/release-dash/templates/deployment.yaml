@@ -49,14 +49,14 @@ spec:
                   key: "{{ .Values.releaseDash.githubPatKey }}"
             - name: GITHUB_REPO_FETCH_TIMER_SECONDS
               value: "{{ .Values.releaseDash.githubRepoFetchTimerSecond }}"
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: http
-          # readinessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: http
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 3
+            successThreshold: 2
+            failureThreshold: 3
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
